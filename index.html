@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var str = 'a1ca355ca3666cac';
+            var re = /(a\d+)(c)/;
+            var re1 = /(a(\d+))(c)/;
+            var re4 = /(a(\d+))(c)/g;
+            console.log(str.match(re));//["a1c", "a1", "c", index: 0, input: "a1ca355ca3666cac"]
+            console.log(str.match(re1));//["a1c", "a1", "1", "c", index: 0, input: "a1ca355ca3666cac"]
+            console.log(str.match(re4));//["a1c", "a355c", "a3666c"]
+            var re3 = /(a(\d+))(c)/g;
+            str.replace(re3,function ($0,$1,$2,$3,$4,$5){
+             console.log( $0,$1,$2,$3,$4 ,$5);
+             });//$4相当于$0在整个字符串中的位置
+            var re2 = /(a\d+)(c)/g;
+            str.replace(re2,function ($0,$1,$2,$3,$4){
+                console.log( $0,$1,$2,$3,$4 );
+            })
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

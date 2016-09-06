@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var str = ' miao    vketang  ';
+            var re = /^\s*|\s*$/g;//开头或结尾
+            var newStr = str.replace(re,"");
+            console.log( "("+newStr+")" );
+            function trim(str){
+                return str.replace(/^\s*|\s*$/g,"")
+            }
+            console.log( trim(str) );
+}
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var text = document.getElementById('text');
+            var tip = document.getElementById('tip');
+            var re = /^[^0]\d{5,12}$/;
+            text.oninput = function () {
+                var val = this.value;
+                if(re.test(val)){
+                    tip.innerHTML = '是QQ'
+                }else {
+                    tip.innerHTML = '不是QQ'
+                }
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+<input type="text" id = "text">
+<p id="tip"></p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+       window.onload = function () {
+           var data1 = '2016-09-06';
+           var data2 = '2016---09-06';
+           var data3 = '2016+++09-06';
+           var data4 = '2016////09////06';
+           var re = /(\d+)\D(\d+)\D(\d)/g;
+           function date(str){
+               return str.replace(re, function ($0,$1,$2,$3) {
+                   return $1+'年'+$2+'月'+$3+'日'
+               })
+           }
+           console.log(date(data1))
+       }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 100px;
+            height:100px;
+            background: #10f7ef;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #box1 {
+            top: 300px;
+            background: #cf9;
+        }
+    </style>
+    <script>
+        function Drag(element){
+            this.element = element;
+            this.init();
+        }
+        Drag.prototype.init = function () {
+            var _this = this;
+            this.element.onmousedown = function (ev) {
+                console.log(1)
+                var disX = ev.clientX - this.offsetLeft;//此处的this的相当于this.element
+                var disY = ev.clientY - this.offsetTop;
+                document.onmousemove = function (ev) {
+                    _this.element.style.left = ev.clientX - disX + "px";
+                    _this.element.style.top = ev.clientY - disY + "px";
+                };
+                document.onmouseup = function (){
+                    document.onmousemove = document.onmouseup = null;
+                }
+            }
+        };
+        window.onload = function () {
+            var box = document.getElementById('box');
+            var box1 = document.getElementById('box1');
+            new Drag(box);
+            new Drag(box1);
+
+        }
+    </script>
+</head>
+<body>
+<div id="box" class="box"></div>
+<div id="box1" class="box"></div>
+</body>
+</html>

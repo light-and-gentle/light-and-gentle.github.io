@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+    ul{
+        display: none;
+    }
+    li{
+    	line-height: 30px;
+    }
+    .bg{
+    	background: blue;
+    }
+    .red{
+    	background: red;
+    }
+    h3::selection{
+        background: none;
+    }
+    
+</style>
+<script src="jquery.js"></script>
+<script>
+$(function () {
+    $("h3").mouseover(function () {
+        $("h3").removeClass('bg');
+        $(this).addClass("bg");
+    })
+    .mouseout(function () {
+        $("h3").removeClass('bg');
+    })
+    .click(function () {
+        if($(this).hasClass('red')){
+            $(this).removeClass("red");
+            $(this).next().fadeToggle('fast','linear');
+        }else{
+            $(this).addClass("red");
+            $(this).next().fadeToggle(600);
+        }
+    })
+})
+</script>
+</head>
+<body>
+
+    <div id="oDiv">
+        <div>
+            <h3>QQ好友</h3>
+            <ul>
+                <li>好友1</li>
+                <li>陌生人1</li>
+                <li>陌生人1</li>
+                <li>陌生人1</li>
+            </ul>
+        </div>
+        <div>
+            <h3>陌生人</h3>
+            <ul>
+                <li>陌生人1</li>
+                <li>陌生人1</li>
+                <li>陌生人1</li>
+                <li>陌生人1</li>
+            </ul>
+        </div>
+        <div>
+            <h3>黑名单</h3>
+            <ul>
+                <li>黑名单1</li>
+                <li>陌生人1</li>
+                <li>陌生人1</li>
+                <li>陌生人1</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

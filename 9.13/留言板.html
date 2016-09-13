@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			li{
+				list-style: none;
+				font-size: 20px;
+			}
+		</style>
+		<script src="jquery.js"></script>
+		<script>
+		$(function () {
+			var input = $('input');
+			input.eq(1).click(function () {
+				var val = input.eq(0).val();
+				var li = $("<li> "+val+"<a href='javascript:;'>删除</a><input type='checkbox'  /></li>");
+				if(val){
+					li.appendTo($('ul:first'));
+				}
+				input.eq(0).val('')
+			});
+			$('ul:first').on('click','a', function () {
+				var parent = $(this).parent();
+				var input = parent.find('input');
+				if(input.prop('checked')){
+					parent.remove()
+				}
+			})
+
+		})
+		</script>
+	</head>
+
+	<body>
+		<input type="text" />
+		<input type="button" value="留言" />
+		<h2>请留言</h2>
+		<ul>
+			<li>123<a href='javascript:;'>删除</a><input type="checkbox"  /></li>
+		</ul>
+		<hr/>
+		<ul>
+			<li>
+				<a href="">友情链接</a>
+			</li>
+			<li>
+				<a href="">友情链接</a>
+			</li>
+			<li>
+				<a href="">友情链接</a>
+			</li>
+		</ul>
+	</body>
+</html>

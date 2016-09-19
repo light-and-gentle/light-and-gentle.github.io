@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 40px;
+            height: 20px;
+            line-height: 20px;
+            padding: 10px 20px;
+            background: #67ffc0;
+            border: 4px outset #f46;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="dialog.css">
+    <script src="jquery.js"></script>
+    <script src="jQuery.drag.js"></script>
+    <script src="jquery.dialog.js"></script>
+    <script>
+        //使用说明：1.引入dialog.css文件，是弹框的样式
+        // 2.引入jquery.js文件
+        // 3.引入jQuery.drag.js文件 拖拽
+        // 4.引入jquery.dialog.js
+        // 5.弹框的标题和内容可以自己定义，确定按钮的事件也可以自定义
+
+        $(function () {
+            var obj = {
+                title:'标题',
+                content:'内容'
+            };
+
+          $('#box').click(function () {
+             $().dialog(obj);
+
+          })
+        })
+    </script>
+
+<body>
+<div id="box">弹框</div>
+</body>
+</html>

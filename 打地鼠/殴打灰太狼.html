@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		       *{
+		       	margin: 0;
+		       	padding: 0;
+		       }
+			#box{
+				width: 320px;
+				height: 480px;
+				background:url(img1/img1/game_bg.jpg) no-repeat;
+				margin: 50px auto;
+				position: relative;
+			}
+			p{
+				position: absolute;
+			}
+			#box p:first-child{
+				color: white;
+				font-size:25px;
+				left: 60px;
+				top: 8px;
+			}
+			/*p所在父级的最后一个,并且元素签名为p的元素*/
+			#progress{
+				width: 180px;
+				height: 16px;
+				background: url(img1/img1/progress.png) no-repeat;
+				top: 66px;
+				left: 63px;				
+			}
+			#game{
+				position: absolute;
+				width: 320px;
+				height: 400px;
+				left: 0;
+				bottom: 0;				
+			}
+			#start{
+				position: absolute;
+				width: 320px;
+				height: 480px;
+				background: rgba(0,0,0,0.6);
+				color: white;
+				font-size: 30px;
+				line-height: 480px;
+				text-align: center;
+				text-shadow: 0 0 25px gold;
+			}
+			img{
+				position: absolute;
+				width: 108px;
+				height: 101px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<!--得分数-->
+			<p></p>
+			<!--进度条-->
+			<p id="progress"></p>
+			<div id="game"></div>
+			<!--封面-->
+			<div id="start">开始游戏</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var start = document.getElementById("start");
+	var scoreP = document.querySelector("p");
+	var progress = document.getElementById("progress");
+	var game = document.getElementById("game");
+	
+	//1.先给封面添加点击事件
+	var timer;
+	var length=progress.width;
+	
+	var timer1;
+	start.onclick = function(){
+		 scoreP.innerHTML="0";
+	   this.style.display="none";
+	   //1.定时创建狼
+	   clearInterval(timer1);
+	   timer1 = setInterval(function(){
+	   	//创建狼的函数
+	   	createWolves();
+	   },2000);
+	   //2.定时控制时间
+	   controlTime();
+	   
+	  
+	   
+	};
+	//第一个位置对象
+	 var posi1 ={l:"100px",t:"33px"};
+	 var posi2 ={l:"18px",t:"80px"};
+	 var posi3 ={l:"185px",t:"60px"};
+	 var posi4 ={l:"16px",t:"140px"};
+	 var posi5 ={l:"100px",t:"110px"};
+	 var posi6 ={l:"200px",t:"130px"};
+	 var posi7 ={l:"28px",t:"211px"};
+	 var posi8 ={l:"118px",t:"188px"};
+	 var posi9 ={l:"205px",t:"215px"};
+	 //位置数组
+	 var positions = [posi1,posi2,posi3,posi4,posi5,posi6,posi7,posi8,posi9];
+	 
+	
+	//封装随机数函数
+	function randomNum(x,y){
+		return Math.floor(Math.random()*(y-x+1)+x);
+	}
+	//封装创建狼的函数
+		function createWolves(){
+			var newImg = document.createElement("img");
+			//随机摆放位置
+			var ranNum1 = randomNum(0,8);
+			//设置图片的位置			
+			newImg.style.left=positions[ranNum1].l;
+			newImg.style.top=positions[ranNum1].t;
+			//设置图片不能被多次点击
+			newImg.isHit = true;
+			//设置图片到底是小灰灰,还是灰太狼
+			//type:h->灰太狼
+			//type:x->小灰灰
+			var rannum = randomNum(1,100);			
+			newImg.type = rannum>70?"x":"h";
+			newImg.src = "img1/img1/"+newImg.type+"0.png";
+			//把图片添加到game当中
+			game.appendChild(newImg);
+			//向上动画
+			var up = 0;
+			//向下动画计时器
+			var downtimer;
+			var uptimer = setInterval(function(){
+			up++;
+			newImg.src = "img1/img1/"+newImg.type+up+".png";
+			if(up == 5){
+				//结束向上动画定时器
+				clearInterval(uptimer);
+				//开始向下动画
+				clearInterval(downtimer);
+				downtimer=setInterval(function(){
+					up--;
+					newImg.src = "img1/img1/"+newImg.type+up+".png";
+					if(up == 0){
+						clearInterval(downtimer);
+						//删除这个节点
+						game.removeChild(newImg);
+					}
+				},150);
+			}
+			},150);
+			//给当前图片添加点击事件
+			newImg.onclick=function(){
+				
+			    //防止连点
+			    if(newImg.isHit==true){
+			    	  newImg.isHit=false;
+			    }else{
+			    	//屏蔽掉下面的代码
+			    	return;
+			    }
+			    //立刻结束向上或者向下动画
+			    clearInterval(uptimer);
+			    clearInterval(downtimer);
+			    //判断是否得分
+			    var score = scoreP.innerHTML - 0;
+			    if(newImg.type=="h"){
+			    	   //灰太狼
+			    	   scoreP.innerHTML=score+10;
+			    }else{
+			    	   //小灰灰
+			    	    scoreP.innerHTML=score-10;
+			    }
+			    //打击动画
+			    var index = 5;
+			    var hitTimer = setInterval(function(){
+			    	     index++;
+			    	     newImg.src = "img1/img1/"+newImg.type+index+".png";
+			    	     if(index == 9 ){
+			    	     	//结束动画
+			    	     	clearInterval(hitTimer);
+			    	     	//删除该节点
+			    	     	game.removeChild(newImg);
+			    	     }
+			    },150);
+			};
+			
+		}
+		//控制时间的函数
+		 var timer;
+	 var sec = 180;
+	 function controlTime(){
+	 	clearInterval(timer);
+	 	timer = setInterval(function(){
+	 		//时间要逐渐减少
+	 		sec--;
+	 		progress.style.width=sec+"px";
+	 		if(sec == 0){
+	 			//游戏结束
+	 			clearInterval(timer);
+	 			alert("gameover!");
+	 			//把上一次游戏的数据还原回去
+	 			//时间
+	 			sec = 180;
+	 			progress.style.width=sec+"px";
+	 			
+	 		    
+	 			//封面再次显示出来
+	 			start.innerHTML = "再来一次";
+	 			start.style.display="block";
+	 			 scoreP.innerHTML="0";
+	 		}
+	 	},100)
+	 }
+     
+</script>

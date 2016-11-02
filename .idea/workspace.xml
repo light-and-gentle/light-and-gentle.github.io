@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17a80c7f-c32d-41d4-a429-0481e5ac7518" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/ad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/adl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/bannerImg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/bannerLeft.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/bot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/botW.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/dal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/download.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/header.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/ico.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/ico1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/ico2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/ico3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/ico4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/pic.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/picList.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/side.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/sideI.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/sideL.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/sideW.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/smiley.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/subBImg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/subBL.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/subBanner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/img/symbol.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/22.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/portrait1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sprite_img.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/light-and-gentle.github.io.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/css/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/js/DD_belatedPNG_0.0.8a.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetion/js/html5shiv.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="light-and-gentle.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,21 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09896907">
-              <caret line="185" column="45" selection-start-line="185" selection-start-column="45" selection-end-line="185" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="508.36365">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.380117">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -98,6 +53,7 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/fetion/index.html" />
+        <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
   </component>
@@ -245,7 +201,7 @@
         <state vertical-scroll-proportion="0.32748538">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
-            <marker date="1478056856287" expanded="true" signature="275:376" placeholder="..." />
+            <marker date="1478057598695" expanded="true" signature="275:376" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -260,8 +216,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09896907">
-          <caret line="185" column="45" selection-start-line="185" selection-start-column="45" selection-end-line="185" selection-end-column="45" />
+        <state vertical-scroll-proportion="-5.380117">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding />
         </state>
       </provider>

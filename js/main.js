@@ -82,7 +82,7 @@ var waited_develop=function(){
     }
 }
 var tagSwitch=function() {
-	var navP=document.getElementById("nav_bar");
+	//var navP=document.getElementById("nav_bar");
 	var next=document.getElementsByClassName("scroll");
     var con=document.getElementsByTagName("section");
     var tag=document.getElementsByTagName("aside")[0].children;
@@ -165,7 +165,7 @@ var cancss3=function(){
 	        }
 	    }    
     },20);
-}
+};
 var canjs=function(){
 	var deg = 0;
     var jsT = function(deg){
@@ -187,7 +187,7 @@ var canjs=function(){
 	        }
 	    }    
     },20);
-}
+};
 var canjq=function(){
 	var deg = 0;
     var jqT = function(deg){
@@ -209,7 +209,7 @@ var canjq=function(){
 	        }
 	    }    
     },20);
-}
+};
 var canbs=function(){
 	var deg = 0;
     var bsT = function(deg){
@@ -231,7 +231,7 @@ var canbs=function(){
 	        }
 	    }    
     },20);
-}
+};
 
 var ps=function(){
 	var deg = 0;
@@ -254,7 +254,7 @@ var ps=function(){
 	        }
 	    }    
     },20);
-}
+};
 //judge
 
 var checkUsername=function(){
@@ -274,7 +274,7 @@ var checkUsername=function(){
 			usernamecheck.innerText="姓名格式错误";
 		}
 	}
-}
+};
 var checkMail=function(){
 	var usermail=document.getElementById("usermail").value;
 	var usermailcheck=document.getElementById("check_usermail");
@@ -291,7 +291,7 @@ var checkMail=function(){
 			usermailcheck.innerText="邮箱格式错误";
 		}
 	}
-}
+};
 var checkTheme=function(){
 	var usertheme=document.getElementById("usertheme").value;
 	var userthemecheck=document.getElementById("check_usertheme");
@@ -299,7 +299,7 @@ var checkTheme=function(){
 	if(usertheme==""||usertheme==null){
 		userthemecheck.innerText="主题不能为空";
 	}
-}
+};
 
 var checkCon=function(){
 	var usercon=document.getElementById("usercon").value;
@@ -308,7 +308,7 @@ var checkCon=function(){
 	if(usercon==""||usercon==null){
 		userconcheck.innerText="内容不能为空";
 	}
-}
+};
 
 var usernameon=document.getElementById("username");
 usernameon.onblur=checkUsername;
@@ -327,7 +327,7 @@ var scrollFunc = function (e) {
     var con=document.getElementsByTagName("section");
         var tag=document.getElementsByTagName("aside")[0].children;  
     
-    var direct = 0;
+    //var direct = 0;
     e = e || window.event;
     if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件   
           
@@ -384,7 +384,7 @@ var scrollFunc = function (e) {
         }
     }
     // ScrollText(direct);
-}
+};
 // 给页面绑定滑轮滚动事件
 if (document.addEventListener) {
     document.addEventListener('DOMMouseScroll', scrollFunc, false);

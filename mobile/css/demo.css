@@ -1,0 +1,571 @@
+@charset "utf-8";
+/*reset.css*/
+body {
+    margin: 0;
+    background: #f1eff0;
+}
+input,
+button,
+a
+{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+input,
+button {
+    -webkit-appearance:none;
+}
+input {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+h2,
+h3,
+p {
+    margin: 0;
+    font-weight: normal;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+    border: none;
+    vertical-align: top;
+}
+.clearFix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/*end reset.css*/
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2.2rem;
+    background: #ea2d2b;
+    z-index: 4;
+}
+.catalogue {
+    position: absolute;
+    top: .55rem;
+    left: 1.05rem;
+    width: 1rem;
+    height:.85rem;
+    background: url("../img/ico.png") no-repeat;
+    background-size:3.17rem 4rem ;
+}
+.search {
+    position: relative;
+    margin: .25em auto .3rem;
+    width: 11.95rem;
+    height: 1.65rem;
+    background: #eee;
+    -webkit-border-radius:.1rem;
+    -moz-border-radius:.1rem;
+    border-radius: .1rem;
+
+}
+.search .text {
+    position: absolute;
+    left: .5rem;
+    top: .2rem;
+    font: .65rem/1.4rem 微软雅黑;
+}
+.search .btn {
+    position: absolute;
+    top:.375rem;
+    right: .675rem;
+    width: .8rem;
+    height: .8rem;
+    background: url("../img/ico.png") no-repeat;
+    background-position: -1.25rem  0;
+    background-size:3.75rem 4rem ;
+}
+.login {
+    display:block;
+    float: right;
+    margin:.55rem .9rem 0 0;
+    font: .6rem/1rem 微软雅黑;
+    color: #fff;
+}
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+.banner {
+    background: url("../img/banner.png")no-repeat center 0;
+    height:8.65rem;
+    background-size: 18rem 8.65rem;
+}
+.intro .ico {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 0 auto;
+    background: url("../img/intro.png")no-repeat;
+    background-size: 9rem 3.6rem;
+}
+.intro ul {
+    background: #fff;
+}
+.intro li {
+    float: left;
+    width: 3.6rem;
+    height: 2.75rem;
+    margin-top: .2rem;
+    text-align: center;
+    font: bold .55rem/.7rem 微软雅黑;
+}
+.intro li a {
+    display: block;
+}
+.intro .text{
+    display: block;
+    margin-top: .25rem;
+    color:#000;
+}
+.intro_1 .ico {
+    background-position: 0 0;
+}
+.intro_2 .ico {
+    background-position: -1.8rem 0;
+}
+.intro_3 .ico {
+    background-position: -3.6rem 0;
+}
+.intro_4 .ico {
+    background-position: -5.4rem 0;
+}
+.intro_5 .ico {
+    background-position: right 0;
+}
+.intro_6 .ico {
+    background-position: 0 -1.8rem;
+}
+.intro_7 .ico {
+    background-position: -1.8rem -1.8rem;
+}
+.intro_8 .ico {
+    background-position: -3.6rem -1.8rem;
+}
+.intro_9 .ico {
+    background-position: -5.4rem -1.8rem;
+}
+.intro_10 .ico {
+    background-position: right -1.8rem;
+}
+.hot {
+    height: 3rem;
+    margin-top: .05rem;
+    background: #fff;
+}
+.hot .logo {
+    float: left;
+    width:  3.375rem;
+    height: 2rem;
+    margin-top:.5rem;
+    border-right: 2px solid #dee3dd;
+    box-sizing: border-box;
+    background: url("../img/hot.png") no-repeat .4rem .075rem;
+    background-size:2.65rem 1.85rem;
+}
+.hot span:nth-of-type(2) {
+    float: left;
+    margin: 1.15rem .5rem 0 .6rem;
+    width: .9rem;
+    height: .8rem;
+    background: url("../img/ico.png");
+    background-position: -2.5rem 0;
+    background-size:3.75rem 4rem ;
+}
+.subTitle {
+    float: left;
+    width: 12.625rem;
+    padding-top: .3rem;
+    font:bold .6rem/1rem 微软雅黑;
+}
+.subTitle p:nth-of-type(1) a {
+    color: #000;
+}
+.subTitle p:nth-of-type(2) a {
+    color: #f72820;
+}
+.activity {
+    height: 23.1rem;
+    margin: 0 auto;
+    background: url("../img/activity.png")no-repeat center 0 #ef0037;
+    background-size: 18rem 4.5rem;
+}
+.activity h2 {
+    padding-top: 4.675rem;
+    font:bold .7rem/1.45rem 微软雅黑;
+    color: #fff;
+    text-align: center;
+}
+.activity h2:before {
+    content:'';
+    display:inline-block;
+    width: 1.7rem;
+    height: .4rem;
+    margin-right:.7rem;
+    background: url("../img/h2.png")no-repeat;
+    background-size:1.7rem .4rem;
+}
+.activity h2:after {
+    content:'';
+    display:inline-block;
+    width: 1.7rem;
+    height: .4rem;
+    margin-left:.7rem;
+    background: url("../img/h2.png")no-repeat;
+    background-size:1.7rem .4rem;
+}
+.activity ul {
+    padding-left: .2rem;
+}
+.activity ul li {
+    float: left;
+    margin:0 .2rem .2rem 0;
+}
+.activity ul li a {
+    display: block;
+    width: 4.25rem;
+    height: 5.4rem;
+}
+.activity ul li img {
+    width:4.25rem;
+    height: 5.4rem;
+}
+.broadcast {
+    margin-top:.125rem;
+    padding-left: .1rem;
+}
+.broadcast li {
+    float: left;
+    margin-right: .1rem;
+}
+.broadcast li a {
+    display: block;
+}
+.broadcast li img {
+    border: .1rem solid #dde1e0;
+    width:8.6rem;
+    height: 5.175rem;
+}
+.guild h3 span{
+    display: inline-block;
+    width: .75rem;
+    height:.75rem;
+    margin:.4rem .15rem 0 .45rem;
+    background: url("../img/ico.png")no-repeat;
+    background-size:3.75rem 4rem ;
+    vertical-align: top;
+}
+.guild ul {
+    background: #fff;
+}
+.guild li a {
+    display: block;
+}
+.guild li ul li {
+    float: left;
+}
+.guild .title {
+    height: 1.55rem;
+    font: bold .7rem/1.6rem 微软雅黑;
+    text-align: center;
+}
+.guild h3:before {
+    content:'';
+    display:inline-block;
+    width: 1.7rem;
+    height: .05rem;
+    margin-top: .75rem;
+    vertical-align:top;
+
+}
+.guild h3:after {
+    content:'';
+    display:inline-block;
+    width: 1.7rem;
+    height: .05rem;
+    margin:.75rem 0 0 .45rem;
+    vertical-align:top;
+}
+.guild_1 h3 {
+    color: #f52a24;
+}
+.guild_1 h3:before,
+.guild_1 h3:after {
+    background:#eeb3ab;
+}
+.guild_1 h3 span {
+    background-position: 0 -1.25rem;
+
+}
+.guild_1 p {
+    font: bold .65rem/1.15rem 微软雅黑;
+    text-align: center;
+}
+.guild_1 li {
+    text-align: center;
+    width: 4.5rem;
+}
+.guild_1 a {
+    color: #242424;
+}
+.cost{
+    display: inline-block;
+    font: .4rem/1.55rem Tahoma, 微软雅黑;
+    color: #f12a27;
+   margin-right: .02rem;
+}
+.cost_1{
+    display: inline-block;
+    font: .4rem/1.55rem Tahoma, 微软雅黑;
+    text-decoration: line-through;
+    color: #969696;
+    /*margin: 0 auto;*/
+}
+.guild_1 img {
+    width: 4.5rem;
+    height: 4rem;
+}
+.guild_2 h3 {
+    color: #dc469d;
+}
+.guild_2 h3:before,
+.guild_2 h3:after {
+    background:#dc469d;
+}
+.guild_2 h3 span {
+    background-position: -.75rem -1.25rem;
+}
+.guild_2 img {
+    width: 4.5rem;
+    height: 6.25rem;
+}
+.ad_1 img ,
+.ad_2 img {
+    width:18rem;
+    height:4.5rem;
+}
+.guild_3 h3 {
+    color: #4c83d5;
+}
+.guild_3 h3:before,
+.guild_3 h3:after{
+    background:#b6cbe6;
+}
+.guild_3 h3 span {
+    background-position: -1.5rem -1.25rem;
+}
+.guild_3 img {
+    width: 6rem;
+    height: 7.3rem;
+}
+.guild_4 h3 {
+    color: #07b2f7;
+}
+.guild_4 h3:before,
+.guild_4 h3:after {
+    background:#b4d8e8;
+}
+.guild_4 h3 span {
+    background-position: -2.25rem -1.25rem;
+}
+.guild_4 img {
+    width: 4.5rem;
+    height: 6.65rem;
+}
+.guild_5 h3 {
+    color: #7c48a4;
+}
+.guild_5 h3:before,
+.guild_5 h3:after {
+
+    background:#c5b5d5;
+
+}
+.guild_5 h3 span {
+    background-position: -3rem -1.25rem;
+}
+.guild_5 img {
+    width: 6rem;
+    height: 7.15rem;
+}
+
+.guild_6 h3 {
+    color: #009c84;
+}
+.guild_6 h3:before,
+.guild_6 h3:after{
+    background:#a5ddd3;
+}
+.guild_6 h3 span {
+    background-position: 0 -2rem;
+}
+.guild_6 img {
+    width: 6rem;
+    height: 8.35rem;
+}
+.guild_7 h3 {
+     color: #f37000;
+ }
+.guild_7 h3:before,
+.guild_7 h3:after {
+
+    background:#fbc680;
+
+}
+.guild_7 h3 span {
+    background-position: -.75rem -2rem;
+}
+.guild_7 img {
+    width: 9rem;
+    height:5.3rem;
+}
+.guild_8 h3 {
+    color: #574f9c;
+}
+.guild_8 h3:before,
+.guild_8 h3:after {
+    background:#c2d0f0;
+}
+.guild_8 h3 span {
+    background-position: -1.5rem -2rem;
+}
+.guild_8_1 img {
+    width: 9rem;
+    height:5.05rem;
+}
+.guild_8_2 img {
+    width: 4.5rem;
+    height: 6.4rem;
+}
+.guild_9 h3 {
+    color: #050a04;
+}
+.guild_9 h3:before,
+.guild_9 h3:after {
+
+    background:#001221;
+}
+.guild_9 h3 span {
+    background-position: -2.25rem -2rem;
+}
+.guild_9 ul {
+    background: #f0f0f0;
+}
+.guild_9 ul li {
+    margin: 0 0 .2rem .1rem;
+}
+.guild_9 img {
+    width: 8.7rem;
+    height:7.3rem;
+    border: .1rem solid #f7fcf6;
+}
+.guild_10 h3 {
+    color: #222721;
+}
+.guild_10 h3:before,
+.guild_10 h3:after {
+    background:#001524;
+}
+.guild_10 h3 span {
+    background-position: -3rem -2rem;
+}
+.guild_10 img {
+    width:4.5rem;
+    height: 6.35rem;
+}
+.guild_11 h3 {
+    font: bold .65rem/1.5rem 微软雅黑;
+    color: #979797;
+}
+.guild_11 h3:before {
+    content:'';
+    display:inline-block;
+    width: .5rem;
+    height: .075rem;
+    margin-right: .2rem ;
+    background: #979797;
+    vertical-align:top;
+}
+.guild_11 h3:after {
+    content:'';
+    display:inline-block;
+    width: .5rem;
+    height: .075rem;
+    margin-left: 0.2rem;
+    vertical-align:top;
+    background: #979797;
+}
+.guild_11 ul {
+    background: #f0f0f0;
+    margin-right: -.15rem;
+}
+.guild_11 li {
+    margin:0 .15rem .15rem 0;
+}
+.guild_11 img {
+    width: 8.9rem;
+    height: 12.3rem;
+}
+.ftLogo {
+    height: 2rem;
+    padding-top: .5rem;
+    width:100%;
+    background: #e7ece6;
+    border-bottom: .1rem solid #000;
+}
+.ftLogo span {
+    display: block;
+    width: 1.5rem;
+    height: 1.05rem;
+    margin: 0 auto;
+    background: url("../img/ico.png")no-repeat;
+    background-position: 0 bottom;
+    background-size:3.75rem 4rem ;
+
+}
+.ftnav {
+    height: 2.5rem;
+    /*padding:  0 2.5rem;*/
+    padding-top: 1rem;
+    font-size: 0;
+    color: #949693;
+    background: #fff;
+    text-align: center;
+}
+.ftnav a {
+    /*float: left;*/
+    display: inline-block;
+    /*margin-top: 1rem;*/
+    font: .5rem/1 微软雅黑;
+    color: #979797;;
+}
+.ftnav span{
+    /*float: left;*/
+    display: inline-block;
+    /*margin: 1rem .95rem;*/
+    margin: 0 .95rem;
+}
+.copyright {
+    height: 2.5rem;
+    font: .6rem/1.9rem arial, 微软雅黑;
+    text-align: center;
+    color: #c9cbc8;
+    background: #fff;
+}

@@ -320,7 +320,7 @@ section.page_two .con_wrap {
 .con_wrap {
     overflow: hidden;
     margin: 0 auto;
-    padding: 2rem 0;
+    /*padding: 2rem 0;*/
     width: 60%;
 }
 
@@ -348,7 +348,7 @@ section.page_two .con_wrap {
 
 .tit_wrap .scissors {
     position: absolute;
-    top: 113px;
+    top: 93px;
     right: 0;
     width: 0;
     height: 20px;
@@ -366,11 +366,6 @@ section.page_two .con_wrap {
 .tit_wrap h2 {
     margin: 60px 0 0;
 }
-
-.tit_wrap+div {
-    margin: 40px 0 0;
-}
-
 aside {
     position: fixed;
     top: 42%;
@@ -716,6 +711,7 @@ nav .nav_wrap {
 .triangle-left,.work_time {
     position: absolute;
     top: 20px;
+    z-index:2;
 }
 
 .triangle-left {

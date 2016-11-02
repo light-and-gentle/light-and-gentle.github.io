@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var scale = 1;
+        if(window.devicePixelRatio){
+            scale = scale / window.devicePixelRatio;
+        }
+        document.write('<meta name="viewport" content="initial-scale='+scale+',minimum-scale='+scale+',maximum-scale='+scale+',user-scalable=no" />');
+    </script>
+    <title>Title</title>
+    <script>
+        toSize ();
+        function toSize () {
+            var html = document.getElementsByTagName("html")[0];
+            var screenW = html.getBoundingClientRect().width;
+            html.style.fontSize = screenW/18 + "px";
+        }
+        window.addEventListener(
+                "orientationchange",
+                function(){
+                    toSize ();
+                },
+                false
+        );
+        window.addEventListener(
+                "resize",
+                function(){
+                    toSize ();
+                },
+                false
+        );
+    </script>
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+<header id="header">
+    <a href="#" class="catalogue"></a>
+    <a href="#" class="login">登录</a>
+    <div class="search">
+        <input type="text"  class="text" placeholder="收索商品/店铺" onfocus="this.placeholder=''" onblur="this.placeholder='收索商品/店铺'">
+        <input type="button" class="btn">
+    </div>
+</header>
+<section class="content">
+    <section class="banner"></section>
+    <section class="intro">
+        <ul class=" clearFix">
+            <li class="intro_1">
+                <a href="#">
+                  <span class="ico"></span>
+                   <span class="text">积分乐园</span>
+                </a>
+            </li>
+            <li class="intro_2">
+                <a href="#">
+                    <span class="ico"></span>
+                    <span class="text">充值</span>
+                </a>
+            </li>
+            <li class="intro_3">
+                <a href="#">
+                    <span class="ico"></span>
+                    <span class="text">天猫国际</span>
+                </a>
+            </li>
+            <li class="intro_4">
+                <a href="#">
+                    <span class="ico"></span>
+                    <span class="text">聚划算</span>
+                </a>
+            </li>
+            <li class="intro_5">
+                <a href="#">
+                    <span class="ico"></span>
+                    <span class="text">天猫超市</span>
+                </a>
+            </li>
+            <li class="intro_6">
+                <a href="#">
+                    <span class="ico"></span>
+                    <span class="text">免费试用</span>
+                </a>
+            </li>
+            <li class="intro_7">
+                <a href="#">
+                    <span class="ico"></span>
+                    <span class="text">手机狂欢</span>
+                </a>
+            </li> <li class="intro_8">
+            <a href="#">
+                <span class="ico"></span>
+                <span class="text">粉丝趴</span>
+            </a>
+        </li>
+            <li class="intro_9">
+                <a href="#">
+                    <span class="ico"></span>
+                    <span class="text">领钱了</span>
+                </a>
+            </li>
+            <li class="intro_10">
+                <a href="#">
+                    <span class="ico"></span>
+                    <span class="text">分类</span>
+                </a>
+            </li>
+        </ul>
+        <div class="hot">
+            <span class="logo"></span>
+            <span></span>
+            <div class="subTitle ">
+                <p><a href="#">埃及橙19元4粒，红鱼柳25元300g</a></p>
+                <p><a href="#">进口龙虾+第2份半价</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="activity">
+        <h2>精选会场</h2>
+        <ul class="clearFix">
+            <li>
+                <a href="#">
+                    <img src="img/activity_img.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#"> <img src="img/activity_img.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"> <img src="img/activity_img.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"> <img src="img/activity_img.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"> <img src="img/activity_img.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"> <img src="img/activity_img.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"> <img src="img/activity_img.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"> <img src="img/activity_img.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"> <img src="img/activity_img.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"> <img src="img/activity_img.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"> <img src="img/activity_img.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"> <img src="img/activity_img.png" alt=""></a>
+            </li>
+        </ul>
+    </section>
+    <ul class="broadcast clearFix">
+        <li>
+            <a href="#"><img src="img/broadcast.png" alt=""></a>
+        </li>
+        <li>
+            <a href="#"><img src="img/broadcast.png" alt=""></a>
+        </li>
+        
+    </ul>
+    <ul class="guild">
+    <li class="guild_1">
+        <div class="title">
+            <h3>
+                <span></span>
+                必抢
+            </h3>
+        </div>
+        <ul class="clearFix">
+            <li>
+                <p><a href="#">今日必抢</a></p>
+                <a href="#">
+                    <img src="img/guild_1.png" alt="">
+                    <span class="cost">¥99</span><span class="cost_1">¥158</span>
+                </a>
+            </li>
+            <li>
+                <p><a href="#">今日必抢</a></p>
+                <a href="#">
+                    <img src="img/guild_1.png" alt="">
+                    <span class="cost">¥99</span><span class="cost_1">¥158</span>
+                </a>
+            </li>
+            <li>
+                <p><a href="#">今日必抢</a></p>
+                <a href="#">
+                    <img src="img/guild_1.png" alt="">
+                    <span class="cost">¥99</span><span class="cost_1">¥158</span>
+                </a>
+            </li>
+            <li>
+                <p><a href="#">今日必抢</a></p>
+                <a href="#">
+                    <img src="img/guild_1.png" alt="">
+                    <span class="cost">¥99</span><span class="cost_1">¥158</span>
+                </a>
+            </li>
+            <li>
+                <p><a href="#">今日必抢</a></p>
+                <a href="#">
+                    <img src="img/guild_1.png" alt="">
+                    <span class="cost">¥99</span><span class="cost_1">¥158</span>
+                </a>
+            </li>
+            <li>
+            <p><a href="#">今日必抢</a></p>
+            <a href="#">
+                <img src="img/guild_1.png" alt="">
+                <span class="cost">¥99</span><span class="cost_1">¥158</span>
+            </a>
+        </li>
+            <li>
+                <p><a href="#">今日必抢</a></p>
+                <a href="#">
+                    <img src="img/guild_1.png" alt="">
+                    <span class="cost">¥99</span><span class="cost_1">¥158</span>
+                </a>
+            </li>
+            <li>
+                <p><a href="#">今日必抢</a></p>
+                <a href="#">
+                    <img src="img/guild_1.png" alt="">
+                    <span class="cost">¥99</span><span class="cost_1">¥158</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </li>
+    <li class="guild_2">
+        <div class="title">
+            <h3>
+                <span></span>
+                时尚范
+            </h3>
+        </div>
+        <ul class="clearFix">
+            <li>
+                <a href="#">
+                    <img src="img/guild_2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/guild_2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/guild_2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/guild_2.png" alt="">
+                </a>
+            </li>
+
+        </ul>
+    </li>
+    <li class="ad_1">
+        <a href="#">
+            <img src="img/ad1.png" alt="">
+        </a>
+    </li>
+    <li class="guild_3">
+        <div class="title">
+            <h3>
+                <span></span>
+                潮流酷玩
+            </h3>
+        </div>
+        <ul class="clearFix">
+            <li><a href="#"><img src="img/guild_3.png" alt=""></a></li>
+            <li><a href="#"><img src="img/guild_3.png" alt=""></a></li>
+            <li><a href="#"><img src="img/guild_3.png" alt=""></a></li>
+        </ul>
+    </li>
+    <li class="guild_4">
+        <div class="title">
+            <h3>
+                <span></span>
+                爱生活
+            </h3>
+        </div>
+        <ul class="clearFix">
+            <li><a href="#"><img src="img/guild_4.png" alt=""></a></li>
+            <li><a href="#"><img src="img/guild_4.png" alt=""></a></li>
+            <li><a href="#"><img src="img/guild_4.png" alt=""></a></li>
+            <li><a href="#"><img src="img/guild_4.png" alt=""></a></li>
+        </ul>
+    </li>
+    <li class="guild_5">
+        <div class="title">
+            <h3>
+                <span></span>
+                国际海购
+            </h3>
+        </div>
+        <ul class="clearFix">
+            <li><a href="#"><img src="img/guild_5.png" alt=""></a></li>
+            <li><a href="#"><img src="img/guild_5.png" alt=""></a></li>
+            <li><a href="#"><img src="img/guild_5.png" alt=""></a></li>
+        </ul>
+    </li>
+    <li class="guild_6">
+        <div class="title">
+            <h3>
+                <span></span>
+                品牌资讯
+            </h3>
+        </div>
+        <ul class="clearFix">
+            <li>
+                <a href="#"><img src="img/guild_6.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_6.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_6.png" alt=""></a>
+            </li>
+        </ul>
+    </li>
+    <li class="guild_7">
+        <div class="title">
+            <h3>
+                <span></span>
+                品牌特卖
+            </h3>
+        </div>
+        <ul class="clearFix">
+            <li>
+                <a href="#"><img src="img/guild_7.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_7.png" alt=""></a>
+            </li>
+        </ul>
+    </li>
+    <li class="ad_2">
+        <a href="#"><img src="img/ad2.png" alt=""></a>
+    </li>
+    <li class="guild_8">
+        <div class="title">
+            <h3>
+                <span></span>
+                热门行业
+            </h3>
+        </div>
+        <ul class="guild_8_1 clearFix">
+          <li>
+              <a href="#">
+                  <img src="img/guild_8_1.png" alt="">
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <img src="img/guild_8_1.png" alt="">
+              </a>
+          </li>
+        </ul>
+        <ul class="guild_8_2 clearFix">
+            <li>
+                <a href="#">
+                    <img src="img/guild_8_2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/guild_8_2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/guild_8_2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/guild_8_2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/guild_8_2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/guild_8_2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/guild_8_2.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/guild_8_2.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="guild_9">
+        <div class="title">
+            <h3>
+                <span></span>
+                品牌旗舰
+            </h3>
+        </div>
+        <ul class="clearFix">
+            <li>
+                <a href="#"><img src="img/guild_9.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_9.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_9.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_9.png" alt=""></a>
+            </li>
+        </ul>
+    </li>
+    <li class="guild_10">
+        <div class="title">
+            <h3>
+                <span></span>
+                主体市场
+            </h3>
+        </div>
+        <ul class="clearFix">
+            <li>
+                <a href="#"><img src="img/guild_10.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_10.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_10.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_10.png" alt=""></a>
+            </li>
+        </ul>
+    </li>
+    <li class="guild_11">
+        <div class="title">
+            <h3>
+                猜你喜欢
+            </h3>
+        </div>
+        <ul class="clearFix">
+            <li>
+                <a href="#"><img src="img/guild_11.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_11.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_11.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/guild_11.png" alt=""></a>
+            </li>
+        </ul>
+    </li>
+</ul>
+    <footer id="footer">
+        <div class="ftLogo">
+            <span></span>
+        </div>
+        <div class="ftnav clearFix">
+            <a href="#">登录</a>
+            <span>|</span>
+            <a href="#">注册</a>
+            <span>|</span>
+            <a href="#">天猫首页</a>
+            <span>|</span>
+            <a href="#">下载客户端</a>
+        </div>
+        <div class="copyright">©2003-2016 Tmall.com 版权所有</div>
+    </footer>
+</section>
+
+</body>
+</html>

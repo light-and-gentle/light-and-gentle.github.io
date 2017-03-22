@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英雄救妹，风雨无阻</title>
+    <meta name="Alipay:title" content="遇到恶劣天气，90%的人都在用这招！"/>
+    <meta name="Alipay:desc" content="英雄救妹，风雨无阻"/>
+    <!--忽略页面中的数字识别为电话号码-->
+    <meta name="format-detection" content="telephone=no" />
+    <!--忽略页面中的邮箱格式为邮箱-->
+    <meta name="format-detection" content="email=no"/>
+    <!--开启对web app程序的支持,删除默认的苹果工具栏和菜单栏，开启全屏显示-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--改变顶部状态条的颜色-->
+    <!--在 web app 应用下状态条（屏幕顶部条）的颜色；默认值为 default（白色），可以定为 black（黑色）和 black-translucent（灰色半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--版本信息-->
+    <script type="text/javascript" src="js/full.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!--微信通用库-->
+    <script src="//wximg.qq.com/wxp/libs/wxmoment/0.0.4/wxmoment.min.js"></script>
+</head>
+<body>
+    <div class="main" id="total">
+        <!--loading-->
+         <div id="loading">
+             <img src="images/loadingBg1.jpg" id="loadingBg">
+             <img src="images/index_8.png" id="index_8">
+             <img src="images/index_9.png" id="index_9">
+             <img src="images/index_10.png" id="index_10">
+             <img src="images/index_2.png" id="index_2">
+             <img src="images/index_5.png" id="index_5">
+             <img src="images/index_4.png" id="index_4">
+             <img src="images/index_6.png" id="index_6">
+             <img src="images/index_3.png" id="index_3">
+             <img src="images/index_1.png" id="index_1">
+             <p id="loadingText">0%</p>
+         </div>
+        <!--INDEX-->
+        <div id="ts" class="main hide" style="z-index:999;">
+            <div class="main" style="background:#000;opacity:0.7;"></div>
+            <img src="images/360.png" class="ts360">
+        </div>
+    </div>
+<!--MUSIC-->
+<audio src="bg.mp3" preload="auto"  loop="loop" id="bgSound" autoplay="autoplay"></audio>
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/main.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <script>
+        //  -----------------loading  预加载 过程--------------
+        var interval;
+$(function() {
+if(is_weixn()==true){
+	$('.ts360').attr('src','images/360_1.png');
+}else{
+	$('.ts360').attr('src','images/360.png');
+}
+function is_weixn(){
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i)=="micromessenger") {
+        return true;
+    } else {
+        return false;
+    }
+ }
+            $("#hbIframe").css("height",window.innerHeight);
+
+            var basePath = "";
+
+            var loader = new WxMoment.Loader();
+
+            //声明资源文件列表
+            var fileList = ['images/loadingBg1.jpg','images/qianting.png','images/upcloud.png',
+                'images/upcloud.png', 'images/bg.jpg', 'images/btn1.png', 'images/btn2.png', 'images/btn3.png'
+                , 'images/btn4.png', 'images/tip1.png', 'images/tip2.png', 'images/tip3.png'
+                , 'images/tip4.png' , 'images/music.png' , 'images/music_pause.png', "images/index_1.png",
+                "images/index_2.png", "images/index_3.png", "images/index_4.png",
+                "images/index_5.png", "images/index_6.png", "images/index_8.png",
+                "images/index_9.png", "images/index_10.png", "images/index_11.png", "images/btn1.png"
+                , "images/btn2.png", "images/btn3.png", "images/btn4.png", "images/icon1.png", "images/icon2.png"
+                , "images/icon3.png", "images/icon4.png", "images/hb1.png", "images/hb2.png"];
+
+            for(var j=1;j<=65;j++){
+                fileList.push('images/'+j+'.png');
+            }
+            for (var i = 0; i < fileList.length; i++) {
+                loader.addImage(basePath + fileList[i]);
+            }
+            //进度监听
+            loader.addProgressListener(function (e) {
+                var percent = Math.round((e.completedCount / e.totalCount) * 100);
+//            console.log("当前加载了", percent, "%");
+                //在这里做 Loading 页面中百分比的显示
+                var jiaNum=Math.floor(percent*0.8);
+                
+                $("#loadingText").text(jiaNum+"%");
+                if(jiaNum==80){
+                   var sumNum=0;;
+                    interval=setInterval(function () {
+                        sumNum+=1;
+                        if(80+sumNum<100){
+                            $("#loadingText").text((80+sumNum)+"%");
+                        }
+                        else{
+                            $("#loadingText").text("100%");
+                            clearInterval(interval);
+                            console.log("remove interval");
+                        }
+
+                    },1000);
+                }
+
+            });
+
+            //加载完成
+            loader.addCompletionListener(function () {
+
+
+            });
+
+            //启动加载
+            loader.start();
+
+        });
+
+        function closeInterVal(){
+
+            if(interval){
+                clearInterval(interval);
+            }
+            $("#loadingText").text("100%");
+
+        }
+
+        function changeIframeH(){
+            $("#ifinfo").css("height","1957");
+        }
+
+
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                document.getElementById('bgSound').play();
+            });
+        }, false);
+    </script>
+<div id="cont">
+	<style>
+		#cont img{display: none;}
+	</style>
+
+</div>
+</div>
+</body>
+</html>
